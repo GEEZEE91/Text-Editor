@@ -33,7 +33,6 @@ module.exports = () => {
           fingerprints: false,
         inject: true,
         name: 'text-editor',
-        name: 'JATE',
         short_name: 'JATE',
         description: 'Just Another Text Editor',
         background_color: '#272822',
@@ -42,7 +41,7 @@ module.exports = () => {
         publicPath: './',
         icons: [
           {
-            src: path.resolve('src/images/logo.png'),
+            src: path.resolve('./src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'icons'),
           },
@@ -60,7 +59,7 @@ module.exports = () => {
         },
         {
           test: /\.m?js$/,
-          exclude: /(node_modules|bower_components)/,
+          exclude: /node_modules/,
           use: {
             loader: 'babel-loader',
             options: {
@@ -72,4 +71,4 @@ module.exports = () => {
         },
       ],
     },
-  }}
+  }};
