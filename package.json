@@ -1,17 +1,17 @@
 {
-  "name": "JATE",
+  "name": "text-editor",
   "version": "1.0.0",
   "engines:": {
     "node": "16.13.2",
     "npm": "8.4.1"
   },
-  "description": "",
+  "description": "just another text editor",
   "main": "server.js",
   "scripts": {
-    "start:dev": "concurrently \\\"cd server && npm run server\\\" \\\"cd client && npm run dev\\\"",
+    "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
     "start": "npm run build && cd server && node server.js",
     "server": "cd server nodemon server.js --ignore client",
-    "build": "cd client && npm run build && ng build",
+    "build": "cd client && npm run build",
     "install": "cd client && npm install",
     "client": "cd client && npm start"
   },
@@ -23,8 +23,7 @@
     "if-env": "^1.0.4"
   },
   "devDependencies": {
-    "concurrently": "^7.6.0",
-    "nodemon": "^2.0.20"
-    
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
   }
 }
