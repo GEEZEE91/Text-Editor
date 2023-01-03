@@ -11,7 +11,7 @@
     "start:dev": "concurrently \\\"cd server && npm run server\\\" \\\"cd client && npm run dev\\\"",
     "start": "npm run build && cd server && node server.js",
     "server": "cd server nodemon server.js --ignore client",
-    "build": "cd client && npm run build",
+    "build": "cd client && npm run build && ng build",
     "install": "cd client && npm install",
     "client": "cd client && npm start"
   },
@@ -23,7 +23,8 @@
     "if-env": "^1.0.4"
   },
   "devDependencies": {
-    "concurrently": "^5.2.0",
-    "nodemon": "^2.0.4"
+    "concurrently": "^7.6.0",
+    "nodemon": "^2.0.20"
+    
   }
 }
