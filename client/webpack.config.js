@@ -16,24 +16,19 @@ module.exports = () => {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
     },
-    
-    
     plugins: [
       // Adding Webpack plugin
       new HtmlWebpackPlugin({
         template: './index.html',
         title: 'JATE',
-      }),
-      new MiniCssExtractPlugin(),
-      
-      // add service worker
+      }),      
+      // service worker
       new InjectManifest({
-        swSrc: './src/sw.js',
-        swDest: 'service-worker.js',
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js',
       }), 
 
-       // add manifest.json
-      new GenerateSW(),
+       // manifest.json
       new WebpackPwaManifest({
         name: 'JATE',
         short_name: 'JATE',
@@ -44,7 +39,7 @@ module.exports = () => {
         publicPath: './',
         icons: [
           {
-            src: path.resolve('assets/images/logo.png'),
+            src: path.resolve('src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'icons'),
           },
@@ -58,11 +53,7 @@ module.exports = () => {
       rules: [
         {
           test: /\.css$/i,
-          use: [MiniCssExtractPlugin.loader, 'css-loader'],
-        },
-        {
-          test: /\.(png|svg|jpg|jpeg|gif)$/i,
-          type: 'asset/resource',
+          use: ['style-loader', 'css-loader'],
         },
         {
           test: /\.m?js$/,
