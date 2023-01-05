@@ -10,7 +10,8 @@ module.exports = () => {
     mode: 'development',
     entry: {
       main: './src/js/index.js',
-      install: './src/js/install.js'
+      install: './src/js/install.js',
+      editor: './src/js/editor.js'
     },
     output: {
       filename: '[name].bundle.js',
@@ -30,10 +31,10 @@ module.exports = () => {
 
        // manifest.json
       new WebpackPwaManifest({
-          fingerprints: false,
+        fingerprints: false,
         inject: true,
-        name: 'text-editor',
-        short_name: 'JATE',
+        name: 'JATE',
+        short_name: 'J.A.T.E',
         description: 'Just Another Text Editor',
         background_color: '#272822',
         theme_color: '#272822',
@@ -71,4 +72,4 @@ module.exports = () => {
         },
       ],
     },
-  }};
+  };};
