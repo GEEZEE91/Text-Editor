@@ -31,11 +31,11 @@ export const getDb = async (value) => {
   const tx = jateDb.transaction('jate', 'readonly');
   const objStore = tx.objectStore('jate');
 
-  const request = objStore.getAll(value)
+  const request = objStore.getAll();
   const res = await request;
 
   console.log('result.value', res);
-  return res[0].value;
+
 };
 
 
