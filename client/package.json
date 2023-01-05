@@ -1,11 +1,13 @@
 {
-  "name": "JATE",
+  "name": "jate",
+  "version": "1.0.0",
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "webpack --mode production",
     "start": "webpack --watch",
     "test": "nodemon server.js"
   },
+  "description": "just another text editor",
   "author": "2U",
   "license": "UNLICENSED",
   "devDependencies": {

@@ -22,12 +22,12 @@ module.exports = () => {
       new HtmlWebpackPlugin({
         template: './index.html',
         title: 'JATE',
-      }),      
+      }),
       // service worker
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: 'src-sw.js',
-      }), 
+        swDest: './dist/src-sw.js'
+      }),
 
        // manifest.json
       new WebpackPwaManifest({
