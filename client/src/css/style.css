@@ -6,6 +6,7 @@
   --dark: #222;
   --monoaki: #272822;
   --navbar-height: 50px;
+  --html-height: 95vh;
 }
 
 body {
@@ -14,6 +15,7 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  min-height: max-content;
 }
 
 h1 {
