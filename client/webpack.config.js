@@ -35,7 +35,7 @@ module.exports = () => {
         inject: true,
         name: 'JATE',
         short_name: 'J.A.T.E',
-        description: 'Just Another Text Editor',
+        description: 'Takes notes with Javascript syntax highlighting',
         background_color: '#272822',
         theme_color: '#272822',
         start_url: './',
@@ -49,7 +49,6 @@ module.exports = () => {
         ],
       }),
     ],
-
 
     module: {
       // Add CSS loaders and babel to webpack
